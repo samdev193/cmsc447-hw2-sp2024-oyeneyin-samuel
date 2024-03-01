@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title> ToDo List</title>
+    <link rel="stylesheet" type="text/css" href="../static/index.css" media="screen">
+</head>
+<body>
+    <h1> ToDo List</h1>
+    <form action="/create" method="post">
+        <input type="text" name="name" placeholder="Enter Item Name" required>
+        <input type="number" name="id" placeholder="Enter Id" required>
+        <input type="number" name="points" placeholder="Enter points" required>
+        <input type="submit" value="Create">
+    </form>
+
+    <form action="/" method="post">
+        <input type="number" name="search" placeholder="Search someone's id" required>
+        <input type="submit" value="search-item">
+    </form>
+
+    <form action="/delete" method="post">
+        <input type="text" name="name" placeholder="Enter Item Name" required>
+        <input type="number" name="id" placeholder="Enter Id" required>
+        <input type="number" name="points" placeholder="Enter points" required>
+        <input type="submit" value="Delete">
+    </form>
+    <form action="/updateName" method="post">
+        <input type="text" name="new name" placeholder="Enter new name">
+        <input type="number" name="id" placeholder="Enter id">
+        <input type="submit" value="Update" required>
+    </form>
+
+    <form action="/updatePoints" method="post">
+        <input type="number" name="new points" placeholder="Enter new points">
+        <input type="number" name="id" placeholder="Enter id">
+        <input type="submit" value="Update" required>
+    </form>
+    <h2>Items:</h2>
+    <div class="items">
+        {% for item in items %}
+                <div class="test">
+                {{ item[0] }}
+                {{ item[1] }}
+                {{ item[2] }}
+                </div>
+        {% endfor %}
+    </div>
+    <h2> Search:</h2>
+    <div class="items test">
+        {{target_item[0]}}
+        {{ target_item[1]}}
+        {{ target_item[2]}}
+    </div>
+</body>
+</html>

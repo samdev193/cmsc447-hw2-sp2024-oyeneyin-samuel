@@ -1,0 +1,20 @@
+body {
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 20px;
+}
+.delete {
+    margin-left: 10px;
+}
+.test {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
